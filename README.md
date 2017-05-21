@@ -1,26 +1,34 @@
-# Artificial Intelligence Nanodegree
-## Introductory Project: Diagonal Sudoku Solver
+# Sudoku Solver
+
+## Project summary and goals
+
+The main goal of this project is to build an intelligent agent that will solve sudoku by  using two powerful techniques in the field of AI: constraint propagation and search
+
+## Step 1: setting up the board
+### Naming Conventions
+#### Rows and Columns
+
+Since we're writing an agent to solve the Sudoku puzzle, let's start by labelling rows and columns.
+
+* The rows will be labelled by the letters A, B, C, D, E, F, G, H, I.
+* The columns will be labelled by the numbers 1, 2, 3, 4, 5, 6, 7, 8, 9. Here we can see the unsolved and solved puzzles with the labels for the rows and columns.
+* The 3x3 squares won't be labelled, but in the diagram, they can be seen with alternating colors of grey and white.
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: When we have 2 boxes in the same unit that allow the same 2 possibilities, we can conclude that no other boxes in the same unit can have those values. Therefore, the steps are: 
+
+* Examine each unit and check for naked twins(pairs of length 2)
+* If present then no other box in the unit can contain the 2 digits in each pair and remove the 2 digits from other unsolved peers in the unit.
+
+Applying this rule reduces other boxes' possibilities and thus narrows down the solution space of the whole puzzle.
+
+
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Diagonal sudoku can be implemented by addition of two extra diagonal units to account for diagonal constraints. The same code will iterate through all the units, and the constraints would thus propagate. More specifically, all the diagonal entries will have the corresponding diagonal entries as their peers. This will result in not accepting solutions that do not satisfy the diagonal constraint. 
 
-### Install
-
-This project requires **Python 3**.
-
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
-Please try using the environment we provided in the Anaconda lesson of the Nanodegree.
-
-##### Optional: Pygame
-
-Optionally, you can also install pygame if you want to see your visualization. If you've followed our instructions for setting up our conda environment, you should be all set.
-
-If not, please see how to download pygame [here](http://www.pygame.org/download.shtml).
 
 ### Code
 
@@ -32,13 +40,4 @@ If not, please see how to download pygame [here](http://www.pygame.org/download.
 ### Visualizing
 
 To visualize your solution, please only assign values to the values_dict using the ```assign_values``` function provided in solution.py
-
-### Submission
-Before submitting your solution to a reviewer, you are required to submit your project to Udacity's Project Assistant, which will provide some initial feedback.  
-
-The setup is simple.  If you have not installed the client tool already, then you may do so with the command `pip install udacity-pa`.  
-
-To submit your code to the project assistant, run `udacity submit` from within the top-level directory of this project.  You will be prompted for a username and password.  If you login using google or facebook, visit [this link](https://project-assistant.udacity.com/auth_tokens/jwt_login for alternate login instructions.
-
-This process will create a zipfile in your top-level directory named sudoku-<id>.zip.  This is the file that you should submit to the Udacity reviews system.
 
