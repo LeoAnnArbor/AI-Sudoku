@@ -40,21 +40,31 @@ For example, the unsolved puzzle at the above left will be written as:
 Converted to board, it looks like the following:
 
 . . 3 |. 2 . |6 . . 
+
 9 . . |3 . 5 |. . 1 
+
 . . 1 |8 . 6 |4 . . 
+
 ------+------+------
+
 . . 8 |1 . 2 |9 . . 
+
 7 . . |. . . |. . 8 
+
 . . 6 |7 . 8 |2 . . 
+
 ------+------+------
+
 . . 2 |6 . 9 |5 . . 
+
 8 . . |2 . 3 |. . 9 
+
 . . 5 |. 1 . |3 . . 
 
 ## Step 3: Strategy 1: Elimination
 
-<img src="./images/Elimination.png">
-<img src="./images/Elimination_result.png">
+<img src="./images/Elimination.png?raw=true">
+<img src="./images/Elimination_result.png?raw=true">
 
 ## Step 4: Strategy 2: Only Choice
 
