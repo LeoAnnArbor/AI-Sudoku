@@ -42,7 +42,6 @@ For example, the unsolved puzzle at the above left will be written as:
 <img src="./images/Elimination.png"> <img src="./images/Elimination_result.png">
 
 
-
 ## Step 4: Strategy 2: Only Choice
 
 
