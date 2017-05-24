@@ -39,8 +39,8 @@ For example, the unsolved puzzle at the above left will be written as:
 
 ## Step 3: Strategy 1: Elimination
 
-![alt text](https://github.com/LeoAnnArbor/SudokuSolver/blob/master/images/Elimination.png)
-![alt text](https://github.com/LeoAnnArbor/SudokuSolver/blob/master/images/Elimination_result.png)
+![alt text](https://github.com/LeoAnnArbor/SudokuSolver/blob/master/images/Elimination.png = 250x250)
+![alt text](https://github.com/LeoAnnArbor/SudokuSolver/blob/master/images/Elimination_result.png = 250x250)
 
 ## Step 4: Strategy 2: Only Choice
 
