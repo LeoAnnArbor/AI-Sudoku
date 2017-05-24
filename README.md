@@ -39,9 +39,9 @@ For example, the unsolved puzzle at the above left will be written as:
 
 ## Step 3: Strategy 1: Elimination
 
-<img src=“./images/Elimination.png" width="400”>
+<img src=“./images/Elimination.png" width="400px”>
 
-<img src=“./images/Elimination_result.png" width="400”>
+<img src=“./images/Elimination_result.png" width="400px”>
 
 ## Step 4: Strategy 2: Only Choice
 
