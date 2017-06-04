@@ -52,9 +52,7 @@ Now that we know how to eliminate values, we can take one pass, go over every bo
 ### Strategy 2: Only Choice
 After obtaining possible results obtained using elimination, let's actually look more carefully at the top 3x3 square in the center, highlighted in red. In this unit, since each digit must appear somewhere in the unit and there seems to be only one box which would allow a value of 1, we can conclude that the top right box must contain the digit 1.So, we have another strategy:
 
-> Strategy 2: Only Choice
-> If there is only one box in a unit which would allow a certain digit, then that box must 
-> be assigned that digit.
+> **Only Choice: If there is only one box in a unit which would allow a certain digit, then that box must be assigned that digit.**
 
 <img src="./images/Only_choice.png">
 
@@ -73,8 +71,7 @@ Here's how we'll apply it. For example, the box `A2` has four possibilities: 1, 
 
 Actually, there's something a bit smarter than that. Looking carefully at the puzzle, `G2`seems like the best one to pick in order to look at all its possibilities because it has the fewest numbers to try out.So it seems that we have a new strategy:
 
-> **Strategy 3: Search**
-> **Pick a box with a minimal number of possible values. Try to solve each of the puzzles obtained by choosing each of these values, recursively.**
+> **Search: Pick a box with a minimal number of possible values. Try to solve each of the puzzles obtained by choosing each of these values, recursively.**
 
 ### Strategy 4: Naked Twins
 
