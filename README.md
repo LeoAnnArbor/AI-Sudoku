@@ -58,6 +58,10 @@ If there is only one box in a unit which would allow a certain digit, then that 
 
 <img src="./images/Only_choice.png">
 
+If you've made it this far, you've already gained hands on exposure to a powerful technique in AI - **_Constraint Propagation_**. Constraint Propagation is all about using local constraints in a space (in the case of Sudoku, the constraints of each square) to dramatically reduce the search space. As we enforce each constraint, we see how it introduces new constraints for other parts of the board that can help us further reduce the number of possibilities. We can then apply the two aforementioned strategies to iteratively solve the sudoku puzzle as shown below:
+
+<img src="./images/Constraint_propagation.png">
+
 ## Step 5: Strategy 3: Naked Twins
 
 
