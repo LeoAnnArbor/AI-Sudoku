@@ -81,32 +81,25 @@ The naked twins technique is the following. Consider the following puzzle, and l
 
 Thus, we go over all the boxes in their same unit, and remove the values 2 and 3 from their possible values as shown on the right.As you can see, we've removed the values 2 and 3 from the boxes `D3` and `E3`. This is the naked twins technique. 
 
+> **Naked Twins:
+If 2 boxes in the same unit allow the same 2 possibilities, then no other boxes in the same unit can have those values.**
+
 <img src="./images/Naked_twins.png"> <img src="./images/Naked_twins_result.png">
 
-# Question 1 (Naked Twins)
-Q: How do we use constraint propagation to solve the naked twins problem?  
-A: When we have 2 boxes in the same unit that allow the same 2 possibilities, we can conclude that no other boxes in the same unit can have those values. Therefore, the steps are: 
+### Special puzzle : Diagonal Sudoku
 
-* Examine each unit and check for naked twins(pairs of length 2)
-* If present then no other box in the unit can contain the 2 digits in each pair and remove the 2 digits from other unsolved peers in the unit.
+A diagonal sudoku is like a regular sudoku, except that among the two main diagonals, the numbers 1 to 9 should all appear exactly once. It can be implemented by addition of two extra diagonal units to the peers. This will result in not accepting solutions that do not satisfy the diagonal constraint. 
 
-Applying this rule reduces other boxes' possibilities and thus narrows down the solution space of the whole puzzle.
+<img src="./images/Diagonal.png">
 
+#### Code
 
+* `solution.py` - implementation of aforementioed strategy.
+* `solution_test.py` - Do not modify this. Test solution by running `python solution_test.py`.
+* `PySudoku.py` - Do not modify this. This is code for visualizing solution.
+* `visualize.py` - Do not modify this. This is code for visualizing solution.
 
-# Question 2 (Diagonal Sudoku)
-Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: Diagonal sudoku can be implemented by addition of two extra diagonal units to account for diagonal constraints. The same code will iterate through all the units, and the constraints would thus propagate. More specifically, all the diagonal entries will have the corresponding diagonal entries as their peers. This will result in not accepting solutions that do not satisfy the diagonal constraint. 
+#### Visualizing
 
-
-### Code
-
-* `solution.py` - You'll fill this in as part of your solution.
-* `solution_test.py` - Do not modify this. You can test your solution by running `python solution_test.py`.
-* `PySudoku.py` - Do not modify this. This is code for visualizing your solution.
-* `visualize.py` - Do not modify this. This is code for visualizing your solution.
-
-### Visualizing
-
-To visualize your solution, please only assign values to the values_dict using the ```assign_values``` function provided in solution.py
+To visualize the solution, please only assign values to the values_dict using the ```assign_values``` function provided in solution.py
 
