@@ -14,7 +14,7 @@ Since we're writing an agent to solve the Sudoku puzzle, let's start by labellin
 * The columns will be labelled by the numbers 1, 2, 3, 4, 5, 6, 7, 8, 9. Here we can see the unsolved and solved puzzles with the labels for the rows and columns.
 * The 3x3 squares won't be labelled, but in the diagram, they can be seen with alternating colors of grey and white.
 
-<img src="./images/labels.png?raw=true">
+<img src="./images/Labels.png?raw=true">
 
 ### Boxes, Units and Peers
 
@@ -25,7 +25,7 @@ And let's start naming the important elements created by these rows and columns 
 * For a particular box (such as 'A1'), its `peers` will be all other boxes that belong to a common unit (namely, those that belong to the same row, column, or 3x3 square).
 Let's see an example. In the grids below, the set of highlighted boxes represent units. Each grid shows a different peer of the box at E3.
 
-<img src="./images/peers.png?raw=true">
+<img src="./images/Peers.png?raw=true">
 
 ## Step 2: Encoding the board
 
@@ -63,9 +63,21 @@ If you've made it this far, you've already gained hands on exposure to a powerfu
 <img src="./images/Constraint_propagation.png">
 
 ### Strategy 3: Search
+let's see if our algorithm will work all the time. Here's a harder sudoku puzzle shown on left and the resulting board after applying the algorithm on the right:
+
+<img src="./images/Harder_sudoku.png"> <img src="./images/Harder_sudoku_result.png">
+
+Clearly, the algorithm didn't solve it. It seemed to reduce every box to a number of possibilites, but it won't go farther than that. We need to think of other ways to improve our solution. We're now going to use another foundational AI technique to help us solve this problem: **_Search_**.Search is used throughout AI from Game-Playing to Route Planning to efficiently find solutions.
+
+Here's how we'll apply it. For example, the box `A2` has four possibilities: 1, 6, 7, and 9. Why don't we fill it in with a 1 and try to solve our puzzle. If we can't solve it, we'll try with a 6, then with a 7, and then with a 9. Sure, it's four times as much work, but each one of the cases becomes easier.
+
+Actually, there's something a bit smarter than that. Looking carefully at the puzzle, `G2`seems like the best one to pick in order to look at all its possibilities because it has the fewest numbers to try out.So it seems that we have a new strategy:
+
+> **Strategy 3: Search
+Pick a box with a minimal number of possible values. Try to solve each of the puzzles obtained by choosing each of these values, recursively.**
+>
 
 ### Strategy 4: Naked Twins
-
 
 
 # Question 1 (Naked Twins)
