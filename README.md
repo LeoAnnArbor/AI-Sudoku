@@ -43,6 +43,7 @@ First things first, let's look at a box on the left and analyze the values that 
 >**Strategy 1: Elimination
 If a box has a value assigned, then none of the peers of this box can have this value.**
 >
+
 Now that we know how to eliminate values, we can take one pass, go over every box that has a value, and eliminate the values that can't appear on the box, based on its peers. Once we do so, the resulting box is shown on the right (for clarity, we've highlighted the original filled-in boxes in bold lettering)
 
 <img src="./images/Elimination.png"> <img src="./images/Elimination_result.png">
@@ -54,6 +55,8 @@ After obtaining possible results obtained using elimination, let's actually look
 > **Strategy 2: Only Choice
 If there is only one box in a unit which would allow a certain digit, then that box must be assigned that digit.**
 >
+
+<img src="./images/Only_choice.png">
 
 ## Step 5: Strategy 3: Naked Twins
 
