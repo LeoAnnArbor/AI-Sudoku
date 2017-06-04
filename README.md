@@ -73,6 +73,9 @@ Actually, there's something a bit smarter than that. Looking carefully at the pu
 
 > **Search: Pick a box with a minimal number of possible values. Try to solve each of the puzzles obtained by choosing each of these values, recursively.**
 
+An example of search using DFS is shown below:
+<img src="./images/Search.png">
+
 ### Strategy 4: Naked Twins
 
 
