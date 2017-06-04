@@ -27,7 +27,6 @@ Let's see an example. In the grids below, the set of highlighted boxes represent
 
 <img src="./images/peers.png?raw=true">
 
-
 ## Step 2: Encoding the board
 
 Now, in order to implement an agent, let's start by coding the board in Python. Then, we'll code the necessary functions to solve the Sudoku. We'll record the puzzles in two ways — as a `string` and as a `dictionary`.
@@ -37,7 +36,8 @@ The string will consist of a concatenation of all the readings of the digits in 
 For example, the unsolved puzzle at the above left will be written as: 
 ..3.2.6..9..3.5..1..18.64....81.29..7.......8..67.82....26.95..8..2.3..9..5.1.3..
 
-## Step 3: Strategy 1 Elimination
+## Strategies to solve the puzzle
+### Strategy 1: Elimination
 First things first, let's look at a box on the left and analyze the values that could go in there.The possible values are 4 and 7. What did we do to figure this out? Well, all the other values already appear either in the same column, row, or 3x3 square of the highlighted box, so we conclude that they can't be a value for this box. In other words, we used the following strategy:
 
 >**Strategy 1: Elimination
@@ -49,7 +49,7 @@ Now that we know how to eliminate values, we can take one pass, go over every bo
 <img src="./images/Elimination.png"> <img src="./images/Elimination_result.png">
 
 
-## Step 4: Strategy 2: Only Choice
+### Strategy 2: Only Choice
 After obtaining possible results obtained using elimination, let's actually look more carefully at the top 3x3 square in the center, highlighted in red. In this unit, since each digit must appear somewhere in the unit and there seems to be only one box which would allow a value of 1, we can conclude that the top right box must contain the digit 1.So, we have another strategy:
 
 > **Strategy 2: Only Choice
@@ -62,7 +62,10 @@ If you've made it this far, you've already gained hands on exposure to a powerfu
 
 <img src="./images/Constraint_propagation.png">
 
-## Step 5: Strategy 3: Naked Twins
+### Strategy 3: Search
+
+### Strategy 4: Naked Twins
+
 
 
 # Question 1 (Naked Twins)
