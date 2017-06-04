@@ -40,7 +40,7 @@ For example, the unsolved puzzle at the above left will be written as:
 ### Strategy 1: Elimination
 First things first, let's look at a box on the left and analyze the values that could go in there.The possible values are 4 and 7. What did we do to figure this out? Well, all the other values already appear either in the same column, row, or 3x3 square of the highlighted box, so we conclude that they can't be a value for this box. In other words, we used the following strategy:
 
-**Strategy 1: Elimination
+> **Elimination:
 If a box has a value assigned, then none of the peers of this box can have this value.**
 
 
